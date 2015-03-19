@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+{% include 'layout/header.html' %}
+<body>
+	<header class="row">
+		<h1>Reports</h1>
+	</header>
+	<main class="row">
+		<form id="step_values" action="">
+			<label for="min">min: </label>
+			<input type="text" name="min">
+			<label for="max">max: </label>
+			<input type="text" name="max">
+			<label for="step">step: </label>
+			<input type="text" name="step">
+			<button id="enviar">Enviar</button>
+		</form>
+		<br/>
+		<p class="row">Press any link to view some particular report</p>
+		<ul>
+			{% for report in data %}
+				{% if report.type == 0 %}
+					<li><a href="{{ report.href }}">{{ report.name }}</a></li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<br/><br/>
+		<p class="row">Press any link to view some particular dataset</p>
+		<ul>
+			{% for report in data %}
+				{% if report.type == 1 %}
+					<li><a href="{{ report.href }}">{{ report.name }}</a></li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+
+	</main>
+	<footer>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+{% include 'layout/header.html' %}
+<body>
+	<table style="background-color: black; color: white;">
+		{% if data %}
+			{% for row in data %}
+			<tr id="{{ row.ID }}">
+				<td title="id">{{ row.ID }}</td>
+				<td title="countrycode">{{ row.CountryCode }}</td>
+				<td title="district">{{ row.District }}</td>
+				<td title="name">{{ row.Name }}</td>
+			</tr>				
+			{% endfor %}
+		{% endif %}
+	</table>
+</body>
+</html>

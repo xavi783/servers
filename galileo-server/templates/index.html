@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    {% include 'layout/header.html' %}
+
+    <body>
+
+    <main class="content">
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Galileo Say:</h2>
+                <br>
+                <p style="font-size: 1.2em;">
+                    <em>Hi, my name is Galileo Galilei</em><br><br>
+                    <a id="light" class="btn btn-primary btn-sm">Turn Light &raquo;</a>
+                    <br><hr><br>
+		    <canvas id="my_canvas" width="320" height="240"></canvas>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    {% include 'layout/scripts.html' %}
+    </body>
+
+</html>
